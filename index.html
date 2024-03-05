@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+    <div class="container w-2/4 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% border-dashed mx-auto p-6 shadow-md rounded my-6">
+        <div class="text-center">
+            <form class="text-center">
+                <div class="space-y-12">
+                    <div class="pb-12">
+                        <h2 class="font-bold leading-7 text-white">Task List</h2>
+                        <div class="mt-10">
+                            <div class="">
+                                <label for="username" class="block text-sm font-medium leading-6 text-white text-start">Add new task</label>
+                                <div class="mt-2">
+                                    <input type="text" name="new_task" id="new_task" autocomplete="given-name"
+                                        class="bg-gradient-to-r from-white to-emerald-300 block w-full rounded-md py-1.5 text-slate-500 px-1.5 shadow-sm  placeholder:text-gray-400   sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                           <div class="mt-6 flex items-center justify-end gap-x-6">
+                                <button type="button" onclick="postTodo()"
+                                    class="rounded-md  px-5 py-2 text-sm font-semibold text-white shadow-sm bg-gradient-to-r from-green-400 to-blue-500 hover:from-rose-500 hover:to-yellow-500  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add Task</button>
+                                <button type="button" onclick="getTodo()"
+                                class="rounded-md  px-5 py-2 text-sm font-semibold text-white shadow-sm bg-gradient-to-r from-rose-600 to-yellow-500 hover:from-blue-600 hover:to-green-500  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Todo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="p-2 hidden text-left text-white" id="todo-group">
+                
+            </div>
+            <div class="flex justify-center p-2" >
+                <ul class="list-decimal grid gird-cols-none gap-y-3" id="list-group">
+                    <!-- <li class="text-white rounded bg-lime-400">
+                        <span class="p-3">Now this is a story all about how, my life got flipped-turned upside down</span>
+                    </li> -->
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
